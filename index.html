@@ -15,7 +15,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css"
+          rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +29,7 @@
 
 </head>
 
-<body id="home">
+<body id="homeBody">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -49,7 +50,9 @@
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
                 <li class="dropdown">
                     <a href="#" id="menu" class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu <span class="caret"></span></a>
+                       role="button" aria-haspopup="true" aria-expanded="false"><span
+                            class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu <span
+                            class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Appetizers</a></li>
                         <li><a href="#">Main Courses</a></li>
@@ -61,7 +64,16 @@
                         <li><a href="#">Weekend Brunch</a></li>
                     </ul>
                 </li>
-                <li><a id="contact" href="contactus.html"><span class="fa fa-envelope-o" aria-hidden="true"></span> Contact</a></li>
+                <li><a id="contact" href="contactus.html"><span class="fa fa-envelope-o" aria-hidden="true"></span>
+                    Contact</a></li>
+            </ul>
+            <ul class="navbar-form pull-right">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="email">
+                    <input type="password" id="password" placeholder="password">
+                    <input type="checkbox" id="checkbox"><span class="label"> Remember me</span>
+                    <button type="button" class="btn btn-primary">Sign In</button>
+                </div>
             </ul>
         </div>
     </div>
@@ -85,13 +97,18 @@
                 <p style="padding:20px;"></p>
                 <img src="img/logo.png" class="img-responsive">
             </div>
+            <div class="col-xs-12 col-sm-2">
+                <p style="padding:40px;"></p>
+                <input type="button" class="btn btn-warning"
+                       onClick="document.getElementById('reserve').scrollIntoView();" value="Reserve Table"/>
             </div>
         </div>
+    </div>
     </div>
 </header>
 
 <div class="container">
-    <div class="row row-header">
+    <div class="row row-content">
         <div class="col-xs-12 col-sm-3 col-sm-push-9">
             <p style="padding:20px;"></p>
 
@@ -106,11 +123,14 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h2 class="media-heading">Uthappizza  <span class="label label-danger">Hot</span>  <span class="badge">$4.99</span></h2>
+                    <h2 class="media-heading">Uthappizza <span class="label label-danger">Hot</span> <span
+                            class="badge">$4.99</span></h2>
+
                     <p>A unique combination of Indian Uthappam (pancake) and
                         Italian pizza, topped with Cerignola olives, ripe vine
                         cherry tomatoes, Vidalia onion, Guntur chillies and
                         Buffalo Paneer.</p>
+
                     <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                 </div>
             </div>
@@ -124,14 +144,26 @@
 
             <h3 align=center>This Month's Promotions</h3>
         </div>
-        <div class="col-xs-12 col-sm-9">
-            <h2>Weekend Grand Buffet</h2>
+        <div class="media">
+            <div class="col-xs-12">
 
-            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
-                main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
-                person </p>
+                <div class="media-body">
+                    <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger">New</span></h2>
 
-            <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
+                        appetizers, six
+                        main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                        $19.99 per
+                        person </p>
+
+                    <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                </div>
+                <div class="media-right">
+                    <a href="#">
+                        <img class="media-object img-thumbnail" src="img/buffet.png" alt="buffet">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -152,14 +184,95 @@
                 <div class="media-body">
                     <h2 class="media-heading">Alberto Somayya</h2>
                     <h4>Executive Chef</h4>
+
                     <p>Award winning three-star Michelin chef with wide
                         International experience having worked closely with
                         whos-who in the culinary world, he specializes in
                         creating mouthwatering Indo-Italian fusion experiences.
                     </p>
+
                     <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row row-content" id="reserve">
+        <div class="col-xs-12 col-sm-3">
+            <!--//<p style="padding:20px;"></p>-->
+
+            <h3 align=center>Reserve a Table</h3>
+        </div>
+        <div class="col-xs-10 col-sm-9">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Number of Guests</label>
+
+                    <div class="col-sm-10">
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 1
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 3
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 4
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 5
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="no_guests"> 6
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback col-sm-12">
+                    <label for="datepicker" class="col-sm-2 control-label">Date and Time</label>
+
+                    <div class="col-sm-4">
+                        <!--<div class="input-group">
+                            <input type="text" id="datepicker" class="date-picker form-control" name="date"
+                                   placeholder="Date">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>-->
+                        <input type="text" id="datepicker" class="date-picker form-control" name="date" placeholder="Date" />
+                        <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-push-1">
+                        <!--<div class="input-group">
+                            <input type="text" id="tpicker" class="time ui-timepicker-input form-control" name="time"
+                                   placeholder="Time">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                        </div>-->
+                        <input type="text" id="tpicker" class="timepicker ui-timepicker-input form-control" name="time" placeholder="Time" />
+                        <i class="glyphicon glyphicon-time form-control-feedback"></i>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-primary">Reserve</button>
+                    </div>
+
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <div class="row col-sm-12 alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning:</strong>: Please <a href="tel:+85212345678" class="alert-link">call</a> us to
+                        reserve for more than six guests.
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -214,11 +327,19 @@
 <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.11/jquery.timepicker.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.11/jquery.timepicker.min.css" rel="stylesheet">
+
 <script>
     $("#about a:contains('About')").parent().addClass('active');
     $("#home a:contains('Home')").parent().addClass('active');
     $("#menu a:contains('Menu')").parent().addClass('active');
     $("#contact a:contains('Contact')").parent().addClass('active');
+    $("#datepicker").datepicker({
+        format: 'mm/dd/yyyy'
+    });
+    $("#tpicker").timepicker({'scrollDefault': 'now'});
 </script>
 
 </body>
