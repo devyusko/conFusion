@@ -1,0 +1,31 @@
+{
+  "name": "confusion",
+  "description": "website for an awesome restaurant",
+  "main": "index.html",
+  "authors": [
+    "XBBLPF2 <joseph.yusko@bnymellon.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "homepage": "https://github.com/devyusko/conFusion",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0",
+    "bootstrap-social": "~4.12.0",
+    "bootstrap-datepicker": "~1.6.0",
+    "jt.timepicker": "~1.8.11"
+  }
+}
