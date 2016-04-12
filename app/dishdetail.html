@@ -47,14 +47,11 @@
         <div class="col-xs-9 col-xs-offset-1">
             <h4 style="display:inline-block">Customer Comments</h4>
             <div class="col-xs-offset-1" style="display:inline-block">
-                Sort By:  <input type="text" id="sortBy" ng-model="dishCtrl.filterText">
-            <!--<label for="sortBy">Customer Comments</label>-->
-                <!--Sort by <input type="text" id="sortBy">-->
+                Sort By:  <input type="text" id="sortBy" ng-model="orderText">
             </div>
-
         </div>
 
-        <div class="col-xs-9 col-xs-offset-1" ng-repeat="item in dishCtrl.dish.comments | orderBy:'dishCtrl.filterBy'">
+        <div class="col-xs-9 col-xs-offset-1" ng-repeat="item in dishCtrl.dish.comments | orderBy:orderText">
             <blockquote>
                 <p>{{item.rating}} Stars</p>
                 <p>{{item.comment}}</p>
@@ -116,13 +113,6 @@
         };
 
         this.dish = dish;
-        //this.filterText = '';
-
-        this.filterBy = function() {
-            return this.dish.rating;
-        };
-
-        console.log(this.filterBy);
 
     });
 
