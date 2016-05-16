@@ -1,0 +1,23 @@
+<div class="row row-content" ng-controller="AboutController">
+    <div class="col-xs-12 col-sm-9">
+        <h2>Corporate Leadership</h2>
+        <ul class="media-list" ng-repeat="leader in leaders">
+            <div class="media-left media-middle">
+
+                <img class="media-object img-thumbnail"
+                     ng-src={{leader.image}} alt="{{leader.designation}}">
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading">{{leader.name}}</h2>
+                <span class="label label-danger">{{leader.designation}}</span>
+
+                <p>{{leader.description}}</p>
+            </div>
+
+        </ul>
+
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <p style="padding:20px;"></p>
+    </div>
+</div>

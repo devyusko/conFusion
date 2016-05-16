@@ -35,6 +35,7 @@ angular.module('confusionApp')
             $scope.toggleDetails = function() {
                 $scope.showDetails = !$scope.showDetails;
             };
+
         }])
 
         .controller('ContactController', ['$scope', function($scope) {
@@ -94,6 +95,22 @@ angular.module('confusionApp')
         }])
 
         // implement the IndexController and About Controller here
+        .controller('IndexController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope, $stateParams, menuFactory, corporateFactory) {
 
+            var featuredDish = menuFactory.getDish(0);
+            $scope.dish = featuredDish;
+
+            var promotion = menuFactory.getPromotion(0);
+            $scope.promotion = promotion;
+
+            //var exectiveChef = corporateFactory.getLeader(3);
+            $scope.executiveChef = corporateFactory.getLeader(3)
+
+        }])
+
+        .controller('AboutController', ['$scope', '$stateParams', 'corporateFactory', function($scope, $stateParams, corporateFactory) {
+
+            $scope.leaders = corporateFactory.getLeaders();
+        }])
 
 ;
